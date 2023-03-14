@@ -1,0 +1,10 @@
+variable1 = int(input("กรอกเลข: "))
+variable2 = int(input("กรอกเลข: "))
+result1 = variable1+variable2
+result2 = variable1-variable2
+result3 = variable1*variable2
+result4 = variable1/variable2
+print(variable1,"+",variable2,"=",result1)
+print(variable1,"-",variable2,"=",result2)
+print(variable1,"*",variable2,"=",result3)
+print(variable1,"/",variable2,"=",result4)
