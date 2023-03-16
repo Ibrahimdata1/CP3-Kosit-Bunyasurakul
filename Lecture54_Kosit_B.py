@@ -1,24 +1,26 @@
 def login():
     usernameInput = input("Username : ")
     passwordInput = input("Password : ")
-    while(usernameInput != "Admin" and passwordInput != "Admin"):
-        input("Username : ")
-        input("Password : ")
-    print("Welcome!")
+    if usernameInput == "Admin" and passwordInput == "Admin":
+        print("Welcome!")
+        return showMenu()
+    else:
+        return login()
 
 def showMenu():
     print("----- iShop -----")
     print("1. Vat Calculator")
     print("2. Price Calculator")
-
+    return menuSelect()
 def menuSelect():
     userSelected = int(input(">> "))
     if userSelected == 1:
-        print(vatCalculator(int(input("totalPrice : "))))
+        return vatCalculator()
     elif userSelected == 2:
-        print(priceCalculator())
+        return priceCalculator()
     else:
         print("Wrong Choice!")
+        return showMenu()
 
 def vatCalculator(totalPrice):
     vat = 7
@@ -31,5 +33,3 @@ def priceCalculator():
     return vatCalculator(price1 + price2)
 
 print(login())
-print(showMenu())
-print(menuSelect())
