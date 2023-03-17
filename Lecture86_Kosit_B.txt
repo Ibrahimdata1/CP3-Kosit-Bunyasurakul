@@ -1,0 +1,5 @@
+Friend.name,Fav.Food,Fav.pets
+Zafeenah,Noodles,Cat
+Abedeen,FriedRice,Cat
+Ibrahim,Steak,Giraffe
+Shafiq,Salmon,Cow
