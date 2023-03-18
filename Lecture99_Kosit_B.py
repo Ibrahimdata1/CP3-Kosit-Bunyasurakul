@@ -4,16 +4,16 @@ import math
 def leftCLick(event):
     print(float(textboxWeight.get())/math.pow(float(textboxHeight.get())/100,2))
     BMI = float(textboxWeight.get())/math.pow(float(textboxHeight.get())/100,2)
-    if BMI > 30:
+    if BMI >= 30:
         labelResult.configure(text="อ้วนมาก")
     elif BMI >= 25:
-        labelResult.configure(text="อ้วนระดับ2")
+        labelResult.configure(text="อ้วน")
     elif BMI >= 23:
-        labelResult.configure(text="อ้วนระดับ1")
+        labelResult.configure(text="น้ำหนักเกิน")
     elif BMI >= 18.5:
-        labelResult.configure(text="ปกติ")
+        labelResult.configure(text="น้ำหนักปกติ")
     elif BMI < 18.5:
-        labelResult.configure(text="ผอม")
+        labelResult.configure(text="ผอมเกินไป")
 
 mainWindow = Tk()
 labelHeight = Label(mainWindow,text="ส่วนสูง (CM)")
